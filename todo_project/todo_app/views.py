@@ -10,26 +10,7 @@ from django.urls import reverse_lazy
 
 
 # Create your views here.
-class Task_view(ListView):
-    model =Task
-    template_name='home.html'
-    context_object_name='obj1'
 
-class Task_detail(DetailView):
-    model =Task
-    template_name='detail.html'
-    context_object_name='i'
-class Task_update(UpdateView):
-    model =Task
-    template_name='update.html'
-    context_object_name='task'
-    fields= ('name','priourity','date')
-    def get_success_url(self):
-        return reverse_lazy('classdetail',kwargs={'pk':self.object.id})
-class Task_delete(DeleteView):
-    model =Task
-    template_name='delete.html'
-    success_url=reverse_lazy('class')
 
 def home(request):
     if request.method=='POST':
