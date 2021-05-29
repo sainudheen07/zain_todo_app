@@ -24,10 +24,7 @@ urlpatterns = [
     path('delete/<int:taskid>/',views.delete,name='delete'),
     path('update/<int:id>/',views.update,name='update'),
     path('',views.home,name='home'),
-    path('class/',views.Task_view.as_view(),name='class'),
-    path('classdetail/<int:pk>/',views.Task_detail.as_view(),name='classdetail'),
-    path('classupdate/<int:pk>/',views.Task_update.as_view(),name='classupdate'),
-    path('classdelete/<int:pk>/',views.Task_delete.as_view(),name='classdelete'),
+
 
 
 ]
