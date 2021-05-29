@@ -2,8 +2,17 @@
 {% block contend %}
 
 <form method="post">
+    <center>
+    <div class="mb-3" style="padding-top:100px;">
     {% csrf_token %}
+    <div class="form-control">
     {{ form.as_p }}
+        </div>
+    <div class="form-control">
     <button type="submit">confirm</button>
+        </div>
+    </div>
+        </center>
 </form>
+
 {% endblock %}
